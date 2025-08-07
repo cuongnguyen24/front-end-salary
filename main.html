@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Danh sách nhân viên</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css">
+</head>
+<body>
+  <h1>Danh sách nhân viên</h1>
+  <div id="nhanVienTable"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
+  <script type="module">
+    import NhanVienController from "./controller/nhanVienController.js";
+    const controller = new NhanVienController();
+    controller.init();
+  </script>
+</body>
+</html>
