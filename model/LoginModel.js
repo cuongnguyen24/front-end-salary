@@ -38,7 +38,7 @@ export default class LoginModel {
     // Validate input trước khi gọi API
     this.validateLoginData(username, password);
 
-    const response = await fetch('https://localhost:7179/api/Auth/login', {
+    const response = await fetch('https://salarymanagementapi-production.up.railway.app/api/Auth/login', {
       method: 'POST',
       headers: { 
         'Content-Type': 'application/json',
@@ -49,6 +49,18 @@ export default class LoginModel {
         matKhau: password
       })
     });
+
+    // const response = await fetch('https://localhost:7179/api/Auth/login', {
+    //   method: 'POST',
+    //   headers: { 
+    //     'Content-Type': 'application/json',
+    //     'Accept': 'application/json'
+    //   },
+    //   body: JSON.stringify({
+    //     tenDangNhap: username.trim(),
+    //     matKhau: password
+    //   })
+    // });
 
     if (!response.ok) {
       const errorText = await response.text();

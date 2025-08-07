@@ -1,6 +1,6 @@
 export default class NhanVienModel {
   async fetchAllNhanVien(token) {
-    const response = await fetch("https://localhost:7179/api/NhanVien", {
+    const response = await fetch("https://salarymanagementapi-production.up.railway.app/api/NhanVien", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`
